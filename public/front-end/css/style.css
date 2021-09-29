@@ -1,0 +1,1258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #fff; }
+
+.containers {
+  width: 85%;
+  margin: auto; }
+
+.row {
+  margin: 0; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+#app a {
+  color: #000;
+  text-decoration: none; }
+#app .popup-success {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 20px;
+  z-index: 9;
+  padding: 10px 14px;
+  background: green;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px; }
+  #app .popup-success i {
+    margin-right: 10px; }
+#app .popup-warning {
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 20px;
+  z-index: 9;
+  padding: 10px 14px;
+  background: #f15b67;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px; }
+  #app .popup-warning i {
+    margin-right: 10px; }
+#app header {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc; }
+  #app header .header-top .containers {
+    width: 85%;
+    margin: auto; }
+    #app header .header-top .containers .row {
+      margin: 0; }
+      #app header .header-top .containers .row .fix {
+        padding: 0;
+        width: 100%; }
+        #app header .header-top .containers .row .fix .menu-inner {
+          margin: 25px 0 10px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          #app header .header-top .containers .row .fix .menu-inner .logo {
+            flex: 1; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu {
+              display: none; }
+            #app header .header-top .containers .row .fix .menu-inner .logo a img {
+              width: 200px;
+              height: 42px; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap {
+            flex: 2;
+            width: 600px;
+            height: 46px; }
+            #app header .header-top .containers .row .fix .menu-inner .search-wrap form {
+              height: 46px;
+              position: relative; }
+              #app header .header-top .containers .row .fix .menu-inner .search-wrap form button {
+                border: none;
+                outline: none;
+                width: 30px;
+                padding: 5px 2px;
+                position: absolute;
+                top: 5px;
+                left: 15px;
+                z-index: 2;
+                background: #fff; }
+              #app header .header-top .containers .row .fix .menu-inner .search-wrap form input {
+                padding: 10px 30px 10px 50px;
+                border: none;
+                outline: none;
+                border: 1px solid #555;
+                width: 90%;
+                position: absolute;
+                border-radius: 100px; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; }
+            #app header .header-top .containers .row .fix .menu-inner .tool-right .profile {
+              position: relative;
+              cursor: pointer; }
+              #app header .header-top .containers .row .fix .menu-inner .tool-right .profile:hover .logged .logged-menu {
+                display: block; }
+              #app header .header-top .containers .row .fix .menu-inner .tool-right .profile img {
+                border-radius: 100px;
+                width: 49px;
+                margin-right: 20px; }
+              #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul {
+                font-size: 14px;
+                margin-bottom: 0;
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                list-style: none;
+                text-transform: uppercase; }
+                #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul .append_search {
+                  margin-right: 10px;
+                  display: none; }
+                #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul li a {
+                  transition: 0.3s;
+                  color: #555; }
+                  #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul li a:hover {
+                    text-decoration: none;
+                    transition: 0.3s;
+                    color: #f15b67; }
+              #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged {
+                display: block; }
+                #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged .logged-menu {
+                  display: none;
+                  position: absolute;
+                  left: 0;
+                  top: 100%;
+                  width: 200px; }
+                  #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged .logged-menu ul {
+                    width: 100%;
+                    background: white;
+                    box-shadow: 0 0 5px;
+                    padding: 5px; }
+                    #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged .logged-menu ul .append_search {
+                      margin-right: 10px;
+                      display: none; }
+                    #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged .logged-menu ul li {
+                      padding: 5px; }
+                      #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged .logged-menu ul li a {
+                        font-size: 18px;
+                        color: #000; }
+                        #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged .logged-menu ul li a:hover {
+                          text-decoration: none;
+                          color: #f15b67;
+                          border-bottom: 1px solid #f15b67; }
+            #app header .header-top .containers .row .fix .menu-inner .tool-right .cart img {
+              width: 29px;
+              height: 31px; }
+  #app header .cover-header {
+    background: #fff; }
+    #app header .cover-header .main-header-top {
+      display: none; }
+    #app header .cover-header .main-header {
+      text-transform: uppercase; }
+      #app header .cover-header .main-header .containers .row .menu {
+        padding: 15px 0;
+        width: 100%; }
+        #app header .cover-header .main-header .containers .row .menu ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          #app header .cover-header .main-header .containers .row .menu ul li:hover {
+            transform: 0.3s; }
+          #app header .cover-header .main-header .containers .row .menu ul li a {
+            transition: 0.3s;
+            color: #000;
+            display: block;
+            width: 100%; }
+            #app header .cover-header .main-header .containers .row .menu ul li a i {
+              display: none; }
+            #app header .cover-header .main-header .containers .row .menu ul li a:hover {
+              transition: 0.3s;
+              color: #f15b67;
+              text-decoration: none; }
+          #app header .cover-header .main-header .containers .row .menu ul li .sub-menu {
+            display: none; }
+    #app header .cover-header .main-header-bottom {
+      display: none; }
+#app section .container-fluids {
+  width: 100%;
+  padding: 10px 0; }
+  #app section .container-fluids .slideshow {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto; }
+    #app section .container-fluids .slideshow .slide-wrapper {
+      width: 400%;
+      -webkit-animation: slide 14s ease infinite;
+      display: flex; }
+      #app section .container-fluids .slideshow .slide-wrapper .slide {
+        width: 100%; }
+        #app section .container-fluids .slideshow .slide-wrapper .slide img {
+          width: 100%;
+          flex-shrink: 0;
+          max-height: 701px; }
+  #app section .container-fluids .breadcrumb {
+    background: #fff;
+    padding: 0; }
+    #app section .container-fluids .breadcrumb .containers ul {
+      padding: 0 10px;
+      display: flex;
+      font-size: 18px;
+      font-weight: 400; }
+      #app section .container-fluids .breadcrumb .containers ul .cate-name {
+        text-transform: capitalize;
+        font-weight: 500; }
+  #app section .container-fluids .profile {
+    padding: 10px;
+    display: flex; }
+    #app section .container-fluids .profile .group-info {
+      width: 20%;
+      height: 200px; }
+      #app section .container-fluids .profile .group-info h3 {
+        text-transform: uppercase;
+        font-size: 18px; }
+      #app section .container-fluids .profile .group-info .info {
+        background-image: url("/front-end/images/bg-info.png");
+        width: 100%;
+        height: 200px; }
+    #app section .container-fluids .profile .group-detail {
+      width: 80%; }
+      #app section .container-fluids .profile .group-detail h3 {
+        text-transform: uppercase;
+        font-size: 18px; }
+  #app section .container-fluids .filter {
+    margin-bottom: 20px; }
+    #app section .container-fluids .filter .containers .show-filter {
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between; }
+      #app section .container-fluids .filter .containers .show-filter ul > li {
+        color: #f15b67;
+        border: 1px solid #f15b67;
+        padding: 8px 20px 8px 15px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+      #app section .container-fluids .filter .containers .show-filter .switch-facet p {
+        cursor: pointer; }
+  #app section .container-fluids .containers .container-fluids {
+    float: left; }
+    #app section .container-fluids .containers .container-fluids .page {
+      margin-left: 15px; }
+      #app section .container-fluids .containers .container-fluids .page .pagination {
+        justify-content: center; }
+  #app section .container-fluids .containers .product {
+    display: block;
+    justify-content: space-between; }
+    #app section .container-fluids .containers .product .group-image {
+      float: left;
+      width: 58%; }
+      #app section .container-fluids .containers .product .group-image .image-avatar {
+        width: 100%; }
+        #app section .container-fluids .containers .product .group-image .image-avatar img {
+          width: 100%;
+          padding: 10px; }
+      #app section .container-fluids .containers .product .group-image .list-image {
+        width: 100%; }
+        #app section .container-fluids .containers .product .group-image .list-image img {
+          float: left;
+          width: 50%;
+          padding: 10px; }
+      #app section .container-fluids .containers .product .group-image .info-detail {
+        padding: 0 10px; }
+    #app section .container-fluids .containers .product .fix-product {
+      width: 41%;
+      padding: 10px;
+      float: left; }
+      #app section .container-fluids .containers .product .fix-product .title-product h1 {
+        font-size: 27px;
+        line-height: 35px; }
+      #app section .container-fluids .containers .product .fix-product .price {
+        margin: 15px 0 10px 0; }
+        #app section .container-fluids .containers .product .fix-product .price span {
+          font-weight: 700;
+          font-size: 18px; }
+      #app section .container-fluids .containers .product .fix-product .size p {
+        margin-bottom: 5px;
+        font-size: 15px; }
+        #app section .container-fluids .containers .product .fix-product .size p input {
+          border: none;
+          outline: none;
+          color: #aaa;
+          font-size: 20px;
+          font-weight: 500; }
+      #app section .container-fluids .containers .product .fix-product .size ul {
+        display: flex; }
+        #app section .container-fluids .containers .product .fix-product .size ul li {
+          font-size: 14px;
+          padding: 7px 10px;
+          margin-right: 5px;
+          border: 1px solid #f15b67;
+          cursor: pointer; }
+          #app section .container-fluids .containers .product .fix-product .size ul li:hover {
+            background: #f15b67;
+            color: #fff; }
+      #app section .container-fluids .containers .product .fix-product .quantity {
+        margin-top: 10px; }
+        #app section .container-fluids .containers .product .fix-product .quantity p {
+          font-size: 15px; }
+        #app section .container-fluids .containers .product .fix-product .quantity ul {
+          display: flex; }
+          #app section .container-fluids .containers .product .fix-product .quantity ul li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #f15b67;
+            text-align: center;
+            line-height: 34px;
+            cursor: pointer; }
+            #app section .container-fluids .containers .product .fix-product .quantity ul li input {
+              border: none;
+              border: 1px solid #f15b67;
+              border-left: none;
+              border-right: none;
+              outline: none;
+              width: 60px;
+              height: 40px;
+              text-align: center;
+              padding: 0 5px;
+              font-weight: 400; }
+      #app section .container-fluids .containers .product .fix-product .btn {
+        margin-top: 15px;
+        width: 100%;
+        padding: 0; }
+        #app section .container-fluids .containers .product .fix-product .btn button {
+          background: #f15b67;
+          color: #fff;
+          outline: none;
+          border: none;
+          width: 100%;
+          padding: 10px 0;
+          cursor: pointer; }
+          #app section .container-fluids .containers .product .fix-product .btn button:hover {
+            background: #ef4451; }
+      #app section .container-fluids .containers .product .fix-product .other-product p {
+        font-size: 15px;
+        margin: 10px 0 0 0; }
+      #app section .container-fluids .containers .product .fix-product .other-product ul {
+        width: 100%; }
+        #app section .container-fluids .containers .product .fix-product .other-product ul li {
+          float: left;
+          width: 30%;
+          margin: 10px 10px 0 0; }
+          #app section .container-fluids .containers .product .fix-product .other-product ul li img {
+            width: 100%; }
+      #app section .container-fluids .containers .product .fix-product .promotion-content {
+        margin-top: 25px; }
+        #app section .container-fluids .containers .product .fix-product .promotion-content i {
+          margin-right: 15px;
+          color: #FF0000;
+          font-size: 20px; }
+        #app section .container-fluids .containers .product .fix-product .promotion-content .fchat p {
+          font-weight: 500;
+          text-transform: uppercase; }
+          #app section .container-fluids .containers .product .fix-product .promotion-content .fchat p a {
+            color: #FF0000; }
+        #app section .container-fluids .containers .product .fix-product .promotion-content .hotline p {
+          color: #000; }
+          #app section .container-fluids .containers .product .fix-product .promotion-content .hotline p span {
+            color: #FF0000; }
+        #app section .container-fluids .containers .product .fix-product .promotion-content .shoping-online a {
+          color: #000;
+          font-weight: 700;
+          text-transform: uppercase; }
+    #app section .container-fluids .containers .product .detail-product {
+      width: 58%;
+      float: left;
+      padding: 10px; }
+      #app section .container-fluids .containers .product .detail-product .group-content-product {
+        width: 100%;
+        border: 1px solid #ef4451; }
+        #app section .container-fluids .containers .product .detail-product .group-content-product .head {
+          width: 100%;
+          border-bottom: 1px solid #ef4451; }
+          #app section .container-fluids .containers .product .detail-product .group-content-product .head ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-betwen; }
+            #app section .container-fluids .containers .product .detail-product .group-content-product .head ul .active {
+              background: #ef4451;
+              color: #fff; }
+            #app section .container-fluids .containers .product .detail-product .group-content-product .head ul li {
+              width: 50%;
+              text-transform: uppercase;
+              color: #ef4451;
+              padding: 5px 0;
+              text-align: center;
+              cursor: pointer; }
+        #app section .container-fluids .containers .product .detail-product .group-content-product .body {
+          padding: 15px 20px; }
+          #app section .container-fluids .containers .product .detail-product .group-content-product .body ul {
+            width: 100%; }
+            #app section .container-fluids .containers .product .detail-product .group-content-product .body ul li {
+              width: 100%;
+              display: flex;
+              padding: 10px 0;
+              border-bottom: 1px solid #fac5c9; }
+              #app section .container-fluids .containers .product .detail-product .group-content-product .body ul li span {
+                width: 50%; }
+              #app section .container-fluids .containers .product .detail-product .group-content-product .body ul li:last-child {
+                border: none; }
+          #app section .container-fluids .containers .product .detail-product .group-content-product .body .size-guide {
+            display: none; }
+            #app section .container-fluids .containers .product .detail-product .group-content-product .body .size-guide img {
+              width: 100%; }
+  #app section .container-fluids .containers .relation-product {
+    margin-top: 10px; }
+    #app section .container-fluids .containers .relation-product .title {
+      text-align: center; }
+      #app section .container-fluids .containers .relation-product .title p {
+        text-transform: uppercase;
+        color: #ef4451;
+        font-size: 1.75rem;
+        font-weight: 400px; }
+  #app section .container-fluids .popup-add {
+    width: 100%;
+    margin: auto;
+    height: 1000px;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    display: none; }
+    #app section .container-fluids .popup-add .popup-content {
+      background: #fff;
+      width: 85%;
+      margin: 100px auto; }
+      #app section .container-fluids .popup-add .popup-content .popup-head {
+        display: flex;
+        justify-content: space-between;
+        background: #f15b67;
+        align-items: center; }
+        #app section .container-fluids .popup-add .popup-content .popup-head p {
+          font-weight: 400;
+          margin: 0;
+          padding: 12px 15px;
+          background: #f15b67;
+          color: #fff;
+          text-transform: uppercase; }
+        #app section .container-fluids .popup-add .popup-content .popup-head span {
+          color: #fff;
+          padding-right: 10px;
+          font-size: 20px;
+          cursor: pointer; }
+    #app section .container-fluids .popup-add .popup-main {
+      padding: 15px;
+      border-bottom: 1px solid #000; }
+      #app section .container-fluids .popup-add .popup-main .table-product table {
+        margin: 0;
+        width: 100%; }
+        #app section .container-fluids .popup-add .popup-main .table-product table tr th {
+          width: 30%;
+          text-align: center;
+          padding: 10px 15px;
+          border: 1px solid #ccc; }
+        #app section .container-fluids .popup-add .popup-main .table-product table tr td {
+          border: 1px solid #ccc;
+          border-top: none; }
+          #app section .container-fluids .popup-add .popup-main .table-product table tr td .col1 {
+            padding: 5px;
+            display: flex;
+            align-items: center; }
+            #app section .container-fluids .popup-add .popup-main .table-product table tr td .col1 img {
+              width: 70px; }
+            #app section .container-fluids .popup-add .popup-main .table-product table tr td .col1 .info-item {
+              margin-left: 5px; }
+              #app section .container-fluids .popup-add .popup-main .table-product table tr td .col1 .info-item h3 {
+                font-size: 14px;
+                font-weight: bold; }
+          #app section .container-fluids .popup-add .popup-main .table-product table tr td .col2 {
+            padding: 5px; }
+            #app section .container-fluids .popup-add .popup-main .table-product table tr td .col2 p {
+              margin-bottom: 10px; }
+              #app section .container-fluids .popup-add .popup-main .table-product table tr td .col2 p span {
+                font-weight: bold; }
+          #app section .container-fluids .popup-add .popup-main .table-product table tr td .col3 {
+            display: flex;
+            justify-content: space-between; }
+            #app section .container-fluids .popup-add .popup-main .table-product table tr td .col3 .col4 {
+              border-right: 1px solid #ccc;
+              padding: 5px;
+              width: 60%; }
+              #app section .container-fluids .popup-add .popup-main .table-product table tr td .col3 .col4 p span {
+                font-weight: bold; }
+            #app section .container-fluids .popup-add .popup-main .table-product table tr td .col3 .col-del {
+              padding: 5px;
+              width: 38%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              #app section .container-fluids .popup-add .popup-main .table-product table tr td .col3 .col-del a {
+                color: #000; }
+      #app section .container-fluids .popup-add .popup-main .table-product .final-cart {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between; }
+        #app section .container-fluids .popup-add .popup-main .table-product .final-cart .right {
+          width: 50%; }
+          #app section .container-fluids .popup-add .popup-main .table-product .final-cart .right .total-price span {
+            font-weight: bold; }
+          #app section .container-fluids .popup-add .popup-main .table-product .final-cart .right .note-cart {
+            color: #818a91;
+            font-size: 12px; }
+    #app section .container-fluids .popup-add .popup-footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0 50px 0; }
+      #app section .container-fluids .popup-add .popup-footer .right {
+        padding-right: 20px;
+        display: flex; }
+        #app section .container-fluids .popup-add .popup-footer .right .next-discover {
+          width: 160px;
+          margin-right: 10px;
+          display: flex;
+          align-items: center; }
+          #app section .container-fluids .popup-add .popup-footer .right .next-discover a {
+            color: #000;
+            font-weight: bold; }
+            #app section .container-fluids .popup-add .popup-footer .right .next-discover a i {
+              margin-left: 5px;
+              font-size: 12px; }
+            #app section .container-fluids .popup-add .popup-footer .right .next-discover a:hover {
+              text-decoration: none; }
+        #app section .container-fluids .popup-add .popup-footer .right .next-checkout {
+          width: 146px;
+          padding: 5px;
+          text-align: center;
+          background: #000; }
+          #app section .container-fluids .popup-add .popup-footer .right .next-checkout a {
+            color: #fff; }
+            #app section .container-fluids .popup-add .popup-footer .right .next-checkout a:hover {
+              text-decoration: none; }
+#app section .containers .block {
+  width: 100%; }
+  #app section .containers .block .title-block {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #app section .containers .block .title-block p {
+      text-transform: uppercase;
+      font-size: 25px;
+      margin: 0;
+      color: #f15b67;
+      padding-left: 10px; }
+    #app section .containers .block .title-block a {
+      color: #000; }
+  #app section .containers .block .product-list {
+    width: 100%; }
+    #app section .containers .block .product-list .product-item {
+      cursor: pointer;
+      width: 25%;
+      padding: 0 20px;
+      float: left; }
+      #app section .containers .block .product-list .product-item .product-image {
+        width: 100%; }
+        #app section .containers .block .product-list .product-item .product-image .hover-img {
+          display: none;
+          width: 100%;
+          height: 100%; }
+        #app section .containers .block .product-list .product-item .product-image .default-img {
+          width: 100%;
+          height: 100%; }
+        #app section .containers .block .product-list .product-item .product-image img {
+          box-sizing: border-box;
+          width: 100%; }
+      #app section .containers .block .product-list .product-item .product-price {
+        padding: 15px 0; }
+        #app section .containers .block .product-list .product-item .product-price .old-price {
+          font-weight: bold; }
+        #app section .containers .block .product-list .product-item .product-price .sale-price {
+          color: #f15b67;
+          font-weight: 700; }
+        #app section .containers .block .product-list .product-item .product-price span {
+          padding: 10px 0;
+          margin-right: 10px; }
+      #app section .containers .block .product-list .product-item .product-title p {
+        width: 100%;
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box; }
+      #app section .containers .block .product-list .product-item .product-sale {
+        width: 100%; }
+        #app section .containers .block .product-list .product-item .product-sale span {
+          background: #f15b67;
+          color: #fff;
+          padding: 4px 15px;
+          font-size: 14px; }
+#app section .containers .cart-page {
+  padding: 15px 10px; }
+  #app section .containers .cart-page .title-page p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 26px; }
+  #app section .containers .cart-page .cart table {
+    margin: 0;
+    width: 100%; }
+    #app section .containers .cart-page .cart table thead {
+      text-align: center; }
+      #app section .containers .cart-page .cart table thead tr .col1, #app section .containers .cart-page .cart table thead tr .col3, #app section .containers .cart-page .cart table thead tr .col4, #app section .containers .cart-page .cart table thead tr .col5, #app section .containers .cart-page .cart table thead tr .col6 {
+        width: 15%; }
+      #app section .containers .cart-page .cart table thead tr .col2 {
+        width: 35%; }
+      #app section .containers .cart-page .cart table thead tr th {
+        padding: 10px 0;
+        border: 1px solid #ccc; }
+    #app section .containers .cart-page .cart table tbody {
+      text-align: left; }
+      #app section .containers .cart-page .cart table tbody tr .center {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400; }
+      #app section .containers .cart-page .cart table tbody tr td {
+        padding: 15px 20px;
+        border: 1px solid #ccc;
+        border-top: none; }
+        #app section .containers .cart-page .cart table tbody tr td img {
+          width: 100%; }
+        #app section .containers .cart-page .cart table tbody tr td .info-item .title-product {
+          font-weight: 500;
+          font-size: 18px;
+          margin-bottom: 10px; }
+        #app section .containers .cart-page .cart table tbody tr td .info-item ul li {
+          margin-bottom: 10px; }
+        #app section .containers .cart-page .cart table tbody tr td .quantity ul {
+          display: flex;
+          justify-content: center; }
+          #app section .containers .cart-page .cart table tbody tr td .quantity ul li {
+            margin-right: 5px; }
+            #app section .containers .cart-page .cart table tbody tr td .quantity ul li input {
+              border: 1px solid #f15b67;
+              color: #f15b67;
+              width: 50px;
+              height: 30px;
+              text-align: center; }
+          #app section .containers .cart-page .cart table tbody tr td .quantity ul .minus, #app section .containers .cart-page .cart table tbody tr td .quantity ul .plus {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #f15b67;
+            color: #f15b67; }
+        #app section .containers .cart-page .cart table tbody tr td a {
+          color: #000; }
+  #app section .containers .cart-page .cart-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; }
+    #app section .containers .cart-page .cart-button .payment-total {
+      width: 30%; }
+      #app section .containers .cart-page .cart-button .payment-total ul li {
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-bottom: none; }
+        #app section .containers .cart-page .cart-button .payment-total ul li:last-child {
+          border-bottom: 1px solid #ccc; }
+          #app section .containers .cart-page .cart-button .payment-total ul li:last-child span:last-child {
+            font-weight: 500; }
+        #app section .containers .cart-page .cart-button .payment-total ul li .reduce {
+          color: #f15b67; }
+        #app section .containers .cart-page .cart-button .payment-total ul li .value-product {
+          font-weight: 500; }
+      #app section .containers .cart-page .cart-button .payment-total .checkout-cart {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px; }
+        #app section .containers .cart-page .cart-button .payment-total .checkout-cart a {
+          display: block;
+          padding: 15px 10px;
+          color: #fff;
+          background: #f15b67;
+          text-transform: uppercase;
+          font-weight: 500; }
+          #app section .containers .cart-page .cart-button .payment-total .checkout-cart a:hover {
+            text-decoration: none; }
+#app section .containers .checkout-page {
+  padding: 0 15px; }
+  #app section .containers .checkout-page .hotline {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0; }
+    #app section .containers .checkout-page .hotline img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px; }
+    #app section .containers .checkout-page .hotline p {
+      font-size: 18px;
+      margin: 0; }
+  #app section .containers .checkout-page .form-login form .title {
+    border-bottom: 1px solid #ccc; }
+    #app section .containers .checkout-page .form-login form .title span {
+      text-transform: uppercase;
+      font-size: 34px;
+      font-weight: 400;
+      border-bottom: 4px solid #000; }
+  #app section .containers .checkout-page .form-login form .step1 {
+    margin-top: 30px; }
+    #app section .containers .checkout-page .form-login form .step1 .step-content {
+      width: 50%;
+      margin: auto; }
+      #app section .containers .checkout-page .form-login form .step1 .step-content .radio-ls {
+        margin-bottom: 15px; }
+        #app section .containers .checkout-page .form-login form .step1 .step-content .radio-ls ul {
+          display: flex;
+          align-items: center; }
+          #app section .containers .checkout-page .form-login form .step1 .step-content .radio-ls ul .fix-radio {
+            display: flex;
+            align-items: center; }
+          #app section .containers .checkout-page .form-login form .step1 .step-content .radio-ls ul li {
+            margin-right: 20px; }
+            #app section .containers .checkout-page .form-login form .step1 .step-content .radio-ls ul li input {
+              width: 18px;
+              height: 18px;
+              color: #f15b67; }
+    #app section .containers .checkout-page .form-login form .step1 .payments {
+      display: flex; }
+      #app section .containers .checkout-page .form-login form .step1 .payments .shipping {
+        width: 60%;
+        padding: 20px; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .m-title {
+          font-size: 20px;
+          padding: 10px 0;
+          font-weight: 500; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping p span {
+          color: #FF0000;
+          font-size: 18px; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .note-tit {
+          font-size: 18px;
+          color: #ccc; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping ul {
+          display: flex; }
+          #app section .containers .checkout-page .form-login form .step1 .payments .shipping ul li {
+            margin-right: 10px;
+            margin-top: 10px; }
+            #app section .containers .checkout-page .form-login form .step1 .payments .shipping ul li input {
+              width: 20px;
+              height: 20px; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .payment-method {
+          margin-top: 50px; }
+          #app section .containers .checkout-page .form-login form .step1 .payments .shipping .payment-method ul {
+            display: block; }
+            #app section .containers .checkout-page .form-login form .step1 .payments .shipping .payment-method ul li {
+              display: flex; }
+              #app section .containers .checkout-page .form-login form .step1 .payments .shipping .payment-method ul li label {
+                margin-left: 10px;
+                cursor: pointer; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .note textarea {
+          width: 100%;
+          height: 100px;
+          font: 99% sans-serif;
+          border: 1px solid #ccc;
+          outline: none;
+          overflow: hidden;
+          padding: 10px; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .submit button {
+          width: 100%;
+          padding: 15px;
+          border: 1px solid #f15b67;
+          outline: none;
+          background: #f15b67;
+          color: #fff;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: 0.3s; }
+          #app section .containers .checkout-page .form-login form .step1 .payments .shipping .submit button:hover {
+            background: #ef4451;
+            transition: 0.3s; }
+      #app section .containers .checkout-page .form-login form .step1 .payments .info-bill {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 40%; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .list-product {
+          border-bottom: 1px solid #ccc;
+          display: flex; }
+          #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .list-product img {
+            width: 107px;
+            height: 145px; }
+          #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .list-product .info {
+            padding: 0 15px 15px 15px;
+            font-weight: 500; }
+            #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .list-product .info .quantity {
+              padding: 10px 0; }
+            #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .list-product .info .price {
+              padding: 10px 0; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .group-price div {
+          display: flex;
+          justify-content: space-between;
+          padding: 5px 0; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .group-price .discount-price .value span {
+          color: #f15b67; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .info-bill .group-price .final-price .value span {
+          color: #f15b67;
+          font-size: 24px; }
+    #app section .containers .checkout-page .form-login form .step1 .bank-acount {
+      display: flex; }
+      #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank {
+        width: 50%; }
+        #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank .m-title {
+          font-weight: 500;
+          font-size: 18px;
+          text-transform: uppercase; }
+        #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank .group {
+          display: flex;
+          align-items: center; }
+          #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank .group .img-bank img {
+            width: 200px; }
+          #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank .group .info-account {
+            letter-spacing: 1px; }
+            #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank .group .info-account div {
+              font-size: 18px; }
+              #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank .group .info-account div span {
+                font-weight: bold; }
+      #app section .containers .checkout-page .form-login form .step1 .bank-acount .note {
+        width: 40%;
+        padding: 0 20px; }
+        #app section .containers .checkout-page .form-login form .step1 .bank-acount .note .m-title {
+          font-size: 18px; }
+          #app section .containers .checkout-page .form-login form .step1 .bank-acount .note .m-title span {
+            font-weight: 700; }
+#app footer {
+  background: #f4f4f4;
+  margin-top: 20px; }
+  #app footer .containers .main-footer {
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-between; }
+    #app footer .containers .main-footer .group-footer {
+      width: 20%; }
+      #app footer .containers .main-footer .group-footer p {
+        text-transform: uppercase;
+        margin: 0;
+        position: relative;
+        font-weight: 500; }
+        #app footer .containers .main-footer .group-footer p i {
+          position: absolute;
+          right: 0;
+          top: 4px; }
+      #app footer .containers .main-footer .group-footer ul {
+        margin-top: 5px;
+        display: none; }
+        #app footer .containers .main-footer .group-footer ul li {
+          padding: 2px 0; }
+          #app footer .containers .main-footer .group-footer ul li a {
+            color: #000;
+            font-size: 14px;
+            transition: 0.3s; }
+            #app footer .containers .main-footer .group-footer ul li a:hover {
+              color: #f15b67;
+              transition: 0.3s;
+              text-decoration: none; }
+  #app footer .containers .footer-bottom {
+    display: flex;
+    justify-content: space-between; }
+    #app footer .containers .footer-bottom .group-footer-bottom {
+      width: 25%; }
+      #app footer .containers .footer-bottom .group-footer-bottom img {
+        max-width: 150px; }
+      #app footer .containers .footer-bottom .group-footer-bottom p {
+        color: #f15b67;
+        font-weight: 500; }
+        #app footer .containers .footer-bottom .group-footer-bottom p i {
+          color: #000;
+          margin-right: 5px; }
+        #app footer .containers .footer-bottom .group-footer-bottom p span {
+          color: #000; }
+  #app footer .container-fluids .copy-right {
+    padding: 20px 0;
+    background: #fff;
+    text-align: center; }
+    #app footer .container-fluids .copy-right p {
+      font-size: 16px; }
+
+@media only screen and (max-width: 1200px) {
+  #app header .header-top .containers {
+    width: 100%;
+    padding: 0 10px; }
+    #app header .header-top .containers .row {
+      margin: 0; }
+      #app header .header-top .containers .row .fix .menu-inner {
+        display: flex;
+        width: 100%; }
+        #app header .header-top .containers .row .fix .menu-inner .logo {
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex; }
+          #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu {
+            display: none;
+            align-items: center;
+            margin-right: 10px; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu i {
+              font-size: 20px; }
+          #app header .header-top .containers .row .fix .menu-inner .logo .logo-image {
+            width: 40%; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .logo-image a img {
+              width: 150px;
+              height: 32px; }
+        #app header .header-top .containers .row .fix .menu-inner .search-wrap {
+          width: 100%;
+          display: block; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap form button {
+            top: 1px; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap form input {
+            width: 100%;
+            padding: 5px 30px 5px 50px; }
+        #app header .header-top .containers .row .fix .menu-inner .tool-right {
+          width: 40%; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul .append_search {
+            display: none; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged ul .append_search {
+            display: block; }
+  #app header .cover-header {
+    background: #fff; }
+    #app header .cover-header .main-header-top {
+      display: none; }
+    #app header .cover-header .main-header .containers {
+      width: 100%; }
+      #app header .cover-header .main-header .containers .row .menu {
+        padding: 15px 10px;
+        width: 100%; }
+        #app header .cover-header .main-header .containers .row .menu ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          #app header .cover-header .main-header .containers .row .menu ul > li {
+            text-transform: uppercase; }
+  #app section .container-fluids {
+    width: 100%; }
+    #app section .container-fluids .slider {
+      width: 100%; }
+      #app section .container-fluids .slider img {
+        width: 100%; }
+  #app section .containers .checkout-page .form-login form .step1 .bank-acount {
+    display: block; }
+    #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank {
+      width: 80%;
+      margin: auto; }
+    #app section .containers .checkout-page .form-login form .step1 .bank-acount .note {
+      width: 80%;
+      margin: auto; } }
+@media only screen and (max-width: 992px) {
+  #app header .header-top .containers {
+    width: 100%;
+    padding: 0 10px; }
+    #app header .header-top .containers .row {
+      margin: 0; }
+      #app header .header-top .containers .row .fix .menu-inner {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0; }
+        #app header .header-top .containers .row .fix .menu-inner .logo {
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex; }
+          #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu {
+            display: flex;
+            align-items: center;
+            margin-right: 10px; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu i {
+              font-size: 20px; }
+          #app header .header-top .containers .row .fix .menu-inner .logo .logo-image {
+            width: 40%; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .logo-image a img {
+              width: 150px;
+              height: 32px; }
+        #app header .header-top .containers .row .fix .menu-inner .search-wrap {
+          width: 100%;
+          display: none; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap form button {
+            padding: 0;
+            top: 1px; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap form input {
+            width: 100%;
+            padding: 0px 30px 0px 50px; }
+        #app header .header-top .containers .row .fix .menu-inner .tool-right {
+          width: 40%; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul .append_search {
+            display: block; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged ul .append_search {
+            display: block; }
+  #app header .cover-header {
+    width: 45%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    margin-left: -45%;
+    overflow: scroll;
+    z-index: 99; }
+    #app header .cover-header .main-header-top {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      background: #fff; }
+      #app header .cover-header .main-header-top .close img {
+        vertical-align: middle;
+        width: 15px; }
+      #app header .cover-header .main-header-top .profile ul {
+        width: 42px;
+        height: 32px; }
+        #app header .cover-header .main-header-top .profile ul li {
+          width: 100%; }
+          #app header .cover-header .main-header-top .profile ul li a img {
+            width: 32px;
+            border-radius: 100px; }
+    #app header .cover-header .main-header .containers {
+      width: 100%;
+      margin: 0; }
+      #app header .cover-header .main-header .containers .row {
+        width: 100%; }
+        #app header .cover-header .main-header .containers .row .menu {
+          padding: 0 15px;
+          width: 100%; }
+          #app header .cover-header .main-header .containers .row .menu ul {
+            width: 100%;
+            display: block;
+            justify-content: space-between; }
+            #app header .cover-header .main-header .containers .row .menu ul li {
+              padding: 10px 0; }
+              #app header .cover-header .main-header .containers .row .menu ul li a {
+                color: #000;
+                font-size: 14px;
+                display: flex;
+                position: relative;
+                align-items: center; }
+                #app header .cover-header .main-header .containers .row .menu ul li a i {
+                  display: block;
+                  position: absolute;
+                  right: 0;
+                  font-size: 14px; }
+              #app header .cover-header .main-header .containers .row .menu ul li .sub-menu {
+                display: none; }
+                #app header .cover-header .main-header .containers .row .menu ul li .sub-menu li {
+                  padding: 10px 30px 0 30px; }
+                  #app header .cover-header .main-header .containers .row .menu ul li .sub-menu li a {
+                    text-transform: capitalize; }
+    #app header .cover-header .main-header-bottom {
+      display: block;
+      padding: 20px 15px;
+      border-top: 1px solid #f15b67;
+      margin-right: 6px; }
+      #app header .cover-header .main-header-bottom ul li a {
+        font-size: 14px;
+        color: #000; }
+  #app section .container-fluids .filter .container .show-filter .switch-facet p {
+    display: none; }
+  #app section .container-fluids .containers .product {
+    display: block; }
+    #app section .container-fluids .containers .product .group-image {
+      width: 100%; }
+    #app section .container-fluids .containers .product .fix-product {
+      width: 100%; }
+      #app section .container-fluids .containers .product .fix-product .title-product h1 {
+        font-size: 22px;
+        font-weight: 400; }
+    #app section .container-fluids .containers .product .detail-product {
+      width: 100%; }
+    #app section .container-fluids .containers .product .relation-product .block .product-item {
+      width: 30%; }
+  #app section .containers {
+    width: 100%;
+    overflow: scroll; }
+    #app section .containers .block .title-block a {
+      padding-right: 5px; }
+    #app section .containers .block .product-list .product-item {
+      width: 30%;
+      margin-left: 2%;
+      padding: 0; }
+    #app section .containers .cart-page {
+      width: 992px;
+      font-size: 14px; }
+    #app section .containers .checkout-page .form-login form .step1 .step-content {
+      width: 80%; }
+    #app section .containers .checkout-page .form-login form .step1 .bank-acount {
+      display: block; }
+      #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank {
+        width: 80%;
+        margin: auto; }
+      #app section .containers .checkout-page .form-login form .step1 .bank-acount .note {
+        width: 80%;
+        margin: auto; }
+    #app section .containers .checkout-page .form-login form .step1 .payments {
+      display: block; }
+      #app section .containers .checkout-page .form-login form .step1 .payments .shipping {
+        width: 100%; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .note textarea {
+          width: 100%; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .submit button {
+          width: 100%; }
+      #app section .containers .checkout-page .form-login form .step1 .payments .info-bill {
+        width: 100%;
+        margin-bottom: 10px; }
+  #app footer .containers {
+    width: 100%; }
+    #app footer .containers .main-footer {
+      display: block; }
+      #app footer .containers .main-footer .group-footer {
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 11px;
+        border-bottom: 1px solid #ccc;
+        font-weight: 500; }
+        #app footer .containers .main-footer .group-footer ul li a {
+          font-size: 11px; } }
+@media only screen and (max-width: 576px) {
+  #app header .header-top .containers {
+    width: 100%;
+    padding: 0 10px; }
+    #app header .header-top .containers .row {
+      margin: 0; }
+      #app header .header-top .containers .row .fix .menu-inner {
+        display: inline-block;
+        width: 100%; }
+        #app header .header-top .containers .row .fix .menu-inner .logo {
+          width: 100%;
+          margin-bottom: 10px;
+          display: flex; }
+          #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu {
+            display: flex;
+            align-items: center;
+            margin-right: 10px; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .btn-showmenu i {
+              font-size: 20px; }
+          #app header .header-top .containers .row .fix .menu-inner .logo .logo-image {
+            width: 40%;
+            display: flex;
+            align-items: center; }
+            #app header .header-top .containers .row .fix .menu-inner .logo .logo-image a img {
+              height: 25px;
+              width: 120px; }
+        #app header .header-top .containers .row .fix .menu-inner .search-wrap {
+          width: 100%;
+          display: none; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap form button {
+            top: 5px; }
+          #app header .header-top .containers .row .fix .menu-inner .search-wrap form input {
+            width: 80%;
+            padding: 5px 30px 5px 50px; }
+        #app header .header-top .containers .row .fix .menu-inner .tool-right {
+          width: 40%; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul .append_search {
+            display: block; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul .a-register, #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .login ul .a-login {
+            display: none; }
+          #app header .header-top .containers .row .fix .menu-inner .tool-right .profile .logged ul .append_search {
+            display: block; }
+  #app header .cover-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65%;
+    background: #fff;
+    height: 100%;
+    z-index: 99;
+    margin-left: -65%;
+    overflow: scroll; }
+    #app header .cover-header .main-header-top {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      background: #fff; }
+      #app header .cover-header .main-header-top .close img {
+        vertical-align: middle;
+        width: 15px; }
+      #app header .cover-header .main-header-top .profile ul {
+        width: 42px;
+        height: 32px; }
+        #app header .cover-header .main-header-top .profile ul li {
+          width: 100%; }
+          #app header .cover-header .main-header-top .profile ul li a img {
+            width: 32px;
+            border-radius: 100px; }
+    #app header .cover-header .main-header {
+      width: 100%; }
+      #app header .cover-header .main-header .containers {
+        width: 100%; }
+        #app header .cover-header .main-header .containers .row .menu {
+          padding: 0 15px;
+          width: 100%; }
+          #app header .cover-header .main-header .containers .row .menu ul {
+            width: 100%;
+            display: block;
+            justify-content: space-between; }
+            #app header .cover-header .main-header .containers .row .menu ul li {
+              padding: 10px 0; }
+              #app header .cover-header .main-header .containers .row .menu ul li a {
+                color: #000;
+                font-size: 10px; }
+  #app header .main-header-bottom {
+    display: block;
+    padding: 20px 15px;
+    border-top: 1px solid #f15b67;
+    margin-right: 4px; }
+    #app header .main-header-bottom ul li a {
+      font-size: 10px;
+      color: #000; }
+  #app section .containers .block .product-list .product-item {
+    margin: 0 2%;
+    width: 46%; }
+  #app section .containers .checkout-page {
+    font-size: 14px; }
+    #app section .containers .checkout-page .form-login form .step1 .step-content {
+      width: 100%; }
+    #app section .containers .checkout-page .form-login form .step1 .bank-acount {
+      display: block; }
+      #app section .containers .checkout-page .form-login form .step1 .bank-acount .list-bank {
+        width: 100%; }
+      #app section .containers .checkout-page .form-login form .step1 .bank-acount .note {
+        width: 100%; }
+    #app section .containers .checkout-page .form-login form .step1 .payments {
+      display: block; }
+      #app section .containers .checkout-page .form-login form .step1 .payments .shipping {
+        width: 100%; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .note textarea {
+          width: 100%; }
+        #app section .containers .checkout-page .form-login form .step1 .payments .shipping .submit button {
+          width: 100%; }
+      #app section .containers .checkout-page .form-login form .step1 .payments .info-bill {
+        width: 100%;
+        margin-bottom: 10px; }
+  #app .container-fluids .containers .product .fix-product form {
+    font-size: 14px; }
+  #app .container-fluids .containers .relation-product .title p {
+    font-size: 24px; }
+  #app .container-fluids .containers .relation-product .block .product-item {
+    width: 46%; }
+  #app .container-fluids .popup-add .popup-content .popup-main .table-product {
+    width: 100%;
+    overflow: scroll; }
+    #app .container-fluids .popup-add .popup-content .popup-main .table-product table {
+      width: 800px; }
+  #app footer .containers .footer-bottom {
+    display: block; }
+    #app footer .containers .footer-bottom .group-footer-bottom {
+      padding: 10px;
+      width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

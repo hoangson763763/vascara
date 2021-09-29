@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  background-image: url("../image/bg.jpg");
+  font-family: 'Roboto', sans-serif;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden; }
+
+a {
+  display: block; }
+#app .popup-success{
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 20px;
+  z-index: 9;
+  padding: 10px 14px;
+  background: green;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+#app  .popup-success i{
+    margin-right: 10px;
+  }
+#app {
+  height: 100%; }
+  #app header {
+    display: flex; }
+    #app header .brand {
+      color: #fff;
+      background: #8b5c7e;
+      flex: 2; }
+      #app header .brand h2 {
+        letter-spacing: 1px;
+        font-size: 20px;
+        height: 100%;
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: center; }
+        #app header .brand h2:hover {
+          cursor: pointer; }
+    #app header .head-left {
+      flex: 10;
+      display: flex;
+      justify-content: space-between;
+      background: #f0bcb4; }
+      #app header .head-left .nav-menu {
+        display: flex; }
+        #app header .head-left .nav-menu ul {
+          margin: 0;
+          display: flex;
+          list-style: none;
+          align-items: center; }
+          #app header .head-left .nav-menu ul .show-sidebar {
+            display: none; }
+          #app header .head-left .nav-menu ul li {
+            position: relative;
+            padding: 5px; }
+            #app header .head-left .nav-menu ul li i {
+              padding: 9px;
+              font-size: 19px;
+              color: #fff;
+              background: #8b5c7e;
+              border-radius: 50%;
+              border: 1px solid #fff; }
+            #app header .head-left .nav-menu ul li span {
+              color: #fff;
+              position: absolute;
+              top: -5px;
+              right: -1px;
+              padding: 2px 7px;
+              border-radius: 50%;
+              background: #27c24c;
+              font-size: 12px; }
+          #app header .head-left .nav-menu ul:hover {
+            cursor: pointer; }
+      #app header .head-left .user {
+        display: flex;
+        align-items: center;
+        margin: 15px 20px 15px 0; }
+        #app header .head-left .user .search {
+          width: 40px;
+          border-radius: 50%;
+          background: #8b5c7e;
+          padding: 7px;
+          display: flex;
+          border: 1px solid #8b5c7e;
+          margin-right: 10px; }
+        #app header .head-left .user form {
+          display: flex; }
+          #app header .head-left .user form input {
+            background: #8b5c7e;
+            width: 100%;
+            padding: 0 4px;
+            border: none;
+            outline: none;
+            color: #fff; }
+            #app header .head-left .user form input::placeholder {
+              color: #fff; }
+          #app header .head-left .user form button {
+            background: #8b5c7e;
+            border: none;
+            outline: none; }
+            #app header .head-left .user form button i {
+              margin-left: 3px;
+              margin-top: 2px;
+              color: #ccc; }
+        #app header .head-left .user .info-user {
+          position: relative;
+          cursor: pointer; }
+          #app header .head-left .user .info-user .username {
+            border: 1px solid #8b5c7e;
+            background: #8b5c7e;
+            -webkit-border-radius: 100px;
+            display: flex;
+            transition: 0.3s;
+            align-items: center; }
+            #app header .head-left .user .info-user .username img {
+              width: 35px; }
+            #app header .head-left .user .info-user .username p {
+              width: 100%;
+              margin: 0;
+              padding-left: 10px;
+              color: #fff;
+              font-size: 14px; }
+            #app header .head-left .user .info-user .username b {
+              color: #fff;
+              display: inline-block;
+              width: 0;
+              height: 0;
+              margin: 0 5px;
+              vertical-align: middle;
+              border-top: 4px dashed;
+              border-top: 4px solid\9;
+              border-right: 4px solid transparent;
+              border-left: 4px solid transparent; }
+            #app header .head-left .user .info-user .username:hover {
+              background: #fa9fa4;
+              transition: 0.3s; }
+              #app header .head-left .user .info-user .username:hover b {
+                color: #000;
+                transition: 0.3s; }
+          #app header .head-left .user .info-user .menu-user {
+            border-radius: 10px;
+            display: none;
+            z-index: 2;
+            bottom: -162px;
+            width: 132%;
+            right: 0;
+            padding: 15px 0 15px 20px;
+            position: absolute;
+            background: #fff; }
+            #app header .head-left .user .info-user .menu-user ul {
+              margin: 0; }
+              #app header .head-left .user .info-user .menu-user ul li {
+                padding: 8px;
+                list-style-type: none; }
+                #app header .head-left .user .info-user .menu-user ul li:hover i {
+                  color: #fa9fa4; }
+                #app header .head-left .user .info-user .menu-user ul li a {
+                  font-size: 16px;
+                  color: #000; }
+                  #app header .head-left .user .info-user .menu-user ul li a:hover {
+                    text-decoration: none; }
+                  #app header .head-left .user .info-user .menu-user ul li a i {
+                    margin-right: 14px;
+                    font-size: 16px; }
+  #app .wrapper {
+    height: 100%;
+    display: flex; }
+    #app .wrapper .side-bar {
+      font-family: 'Roboto', sans-serif;
+      font-size: 100%;
+      background: rgba(52, 48, 48, 0.78);
+      flex: 2;
+      height: 100%;
+      overflow: scroll;
+      padding-bottom: 50px; }
+      #app .wrapper .side-bar::-webkit-scrollbar {
+        width: 1px; }
+      #app .wrapper .side-bar ul {
+        list-style: none; }
+        #app .wrapper .side-bar ul li {
+          color: #fff;
+          position: relative;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          padding: 0px 0px; }
+          #app .wrapper .side-bar ul li:hover {
+            cursor: pointer; }
+          #app .wrapper .side-bar ul li a {
+            line-height: 52px;
+            padding: 0 0 0 25px;
+            color: #fff;
+            font-size: 14px;
+            display: block;
+            width: 100%; }
+            #app .wrapper .side-bar ul li a i {
+              margin-right: 10px; }
+            #app .wrapper .side-bar ul li a:hover {
+              text-decoration: none;
+              background: rgba(40, 40, 46, 0.28); }
+          #app .wrapper .side-bar ul li ul {
+            display: none; }
+            #app .wrapper .side-bar ul li ul li {
+              border: none; }
+              #app .wrapper .side-bar ul li ul li a {
+                font-size: 12px;
+                padding: 0 46px;
+                line-height: 25px;
+                display: block;
+                width: 100%;
+                padding: 13px 0 13px 51px; }
+          #app .wrapper .side-bar ul li span {
+            background: url("../image/nav-expand.png") no-repeat top;
+            border-radius: 3px;
+            height: 17px;
+            width: 17px;
+            display: inline-block;
+            position: absolute;
+            right: 15px;
+            top: 18px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px; }
+    #app .wrapper .main {
+      flex: 10;
+      overflow: scroll; }
+      #app .wrapper .main::-webkit-scrollbar {
+        width: 5px; }
+      #app .wrapper .main::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+      #app .wrapper .main::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey; }
+      #app .wrapper .main .table-agile-info {
+        background: #fff;
+        border-radius: 7px;
+        margin: 20px;
+        padding: 20px;
+        padding-bottom: 50px; }
+        #app .wrapper .main .table-agile-info a {
+          font-size: 12px;
+          margin-bottom: 5px; }
+        #app .wrapper .main .table-agile-info .dataTables_wrapper {
+          padding-bottom: 40px; }
+          #app .wrapper .main .table-agile-info .dataTables_wrapper .display thead tr th {
+            padding-left: 10px;
+            text-align: center; }
+          #app .wrapper .main .table-agile-info .dataTables_wrapper .display tbody tr td {
+            text-align: center; }
+        #app .wrapper .main .table-agile-info .add-menu-btn {
+          text-align: right;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between; }
+          #app .wrapper .main .table-agile-info .add-menu-btn h2 {
+            margin: 0; }
+          #app .wrapper .main .table-agile-info .add-menu-btn a {
+            color: #fff;
+            padding: 11px 8px;
+            color: #fff;
+            text-decoration: none;
+            background-color: green;
+            -webkit-text-decoration-skip: objects;
+            border-radius: 6px;
+            transition: 0.5s; }
+        #app .wrapper .main .table-agile-info .display thead tr th:last-child {
+          width: 170px; }
+        #app .wrapper .main .table-agile-info h2 {
+          margin-bottom: 20px; }
+        #app .wrapper .main .table-agile-info form .cke_chrome {
+          border: 1px solid #555; }
+          #app .wrapper .main .table-agile-info form .cke_chrome .cke_reset {
+            border-top: 1px solid #555; }
+        #app .wrapper .main .table-agile-info form .form-group .ajax-img {
+          display: inline-block; }
+          #app .wrapper .main .table-agile-info form .form-group .ajax-img div {
+            float: left;
+            margin: 0px 10px 10px 0;
+            position: relative; }
+            #app .wrapper .main .table-agile-info form .form-group .ajax-img div img {
+              border-radius: 4px;
+              height: 200px; }
+            #app .wrapper .main .table-agile-info form .form-group .ajax-img div a {
+              position: absolute;
+              top: 0;
+              right: 0; }
+              #app .wrapper .main .table-agile-info form .form-group .ajax-img div a i {
+                font-size: 20px; }
+        #app .wrapper .main .table-agile-info form .form-group input, #app .wrapper .main .table-agile-info form .form-group select, #app .wrapper .main .table-agile-info form .form-group textarea {
+          border: 1px solid #555; }
+
+@media only screen and (max-width: 600px) {
+  #app {
+    width: 100%; }
+    #app header {
+      width: 100%;
+      display: block; }
+      #app header .brand {
+        padding: 10px 0; }
+        #app header .brand h2 {
+          margin: 0; }
+      #app header .head-left {
+        background: #f0bcb4;
+        display: block; }
+        #app header .head-left .nav-menu {
+          padding-top: 10px; }
+          #app header .head-left .nav-menu ul .show-sidebar {
+            display: block; }
+        #app header .head-left .user {
+          padding-bottom: 10px;
+          justify-content: flex-end; }
+    #app .wrapper {
+      position: relative; }
+      #app .wrapper .side-bar {
+        z-index: 99;
+        flex: 6;
+        width: 50%;
+        position: absolute;
+        top: -15px;
+        margin-left: -50%; }
+        #app .wrapper .side-bar ul {
+          margin: 0; }
+      #app .wrapper .main {
+        flex: 12; } }
+@media screen and (max-width: 800px) and (min-width: 601px) {
+  #app {
+    width: 100%; }
+    #app header {
+      width: 100%;
+      display: block; }
+      #app header .brand {
+        padding: 10px 0; }
+        #app header .brand h2 {
+          margin: 0; }
+      #app header .head-left {
+        background: #f0bcb4;
+        display: flex; }
+        #app header .head-left .nav-menu ul .show-sidebar {
+          display: block; }
+        #app header .head-left .user {
+          justify-content: flex-end; }
+    #app .wrapper {
+      position: relative; }
+      #app .wrapper .side-bar {
+        flex: 6;
+        width: 50%;
+        position: absolute;
+        top: -15px;
+        margin-left: -50%; }
+        #app .wrapper .side-bar ul {
+          margin: 0; }
+      #app .wrapper .main {
+        flex: 12; } }
+
+/*# sourceMappingURL=style.css.map */
